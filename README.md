@@ -1,6 +1,8 @@
 # genpassword
 
-Simple secure password generator written in Golang.
+Simple secure password generator written in Golang, which uses the built in secure random generator in the OS you are using to create a securely random password.
+
+The underlying source of randomness comes from crypto/rand#Reader. [See here](https://pkg.go.dev/crypto/rand#pkg-variables) for an explanation.
 
 Never get compromised or be affected by password DB leaks again!
 
@@ -25,4 +27,5 @@ This builds and copies the program to /usr/local/bin where it can be run anywher
 ## Example usage
 
 `genpassword` generates 32 random alphanumeric characters (may include ASCII symbols)
+
 `genpassword -a -s 64` generates 64 random alphanumeric characters 
